@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>猫咪教育官网-选择cat选择未来</title>
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+      //通过window.screen.width获取屏幕的宽度
+     var offWidth = window.screen.width / 16; //这里用宽度/16表示1rem取得的px
+     //基于的是320宽度的设计稿
+     document.getElementsByTagName("html")[0].style.fontSize = offWidth + 'px'; //把rem的值复制给顶级标签html的font-size
+</script>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    img{
+        border:0;
+    }
+    #warp{
+        width:100%;
+        height: 100%;
+    }
+    #head{
+        width: 100%;
+        height:1.2rem;
+        line-height: 1.2rem;
+    }
+    #head-context{
+        width: 92%;
+        height: auto;
+        margin: 0 auto;
+    }
+    #back{
+        width:0.6rem;
+        height: auto;
+         position: absolute;
+        top: 0.4rem;
+        left: 0.4rem;
+    }
+    #back>img{
+        width: 1rem;
+        height: 1rem;
+    }
+    #registe{
+        position: absolute;
+        right: 0.5rem;
+        top: 0.4rem;
+        color: #fe7b24;
+        font-size: 0.7rem;
+        text-decoration:none;
+    }
+    #login{
+        width: 3rem;
+        height: 3rem;
+        margin: 2rem auto 0;
+    }
+    #login>img{
+        width: 3rem;
+        height: 3rem;
+    }
+    #input{
+        width: 90%;
+        margin:1rem auto;
+        height: auto;
+    }
+    #input>input{
+        width: 90%;
+        margin:0 auto;
+        display: block;
+        border-radius:0;
+        padding: 0.45rem 0;
+        border: none;
+        line-height: 0.6rem;
+        color: #222222;
+        border-bottom:1px solid #d6d6d6 ;
+        height: 1.2rem;
+    }
+    #submit-btn{
+        width:90%;
+        line-height: 1.8rem;
+        text-align: center;
+        color: white;
+        height: 1.8rem;
+        border-radius: 0.2rem;
+        margin: 1rem auto 0;
+        background-color: #fe7b24;
+        font-size: 0.8rem;
+    }
+</style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <a href="猫咪教育官网.html" id="back">
+                <img src="image/箭头.svg" alt="">
+            </a>
+            <a href="登录.html" id="registe">登录</a>
+        </div>
+        <div id="login">
+            <img src="image/登录.svg" alt="">
+        </div>
+        <div id="input">
+            <input type="text" name="username" value="" placeholder="手机号码(作为您登录使用)">
+            <input type="password" name="password" value="" placeholder="密码">
+            <input type="password" name="password" value="" placeholder="再次确认密码">
+            <div id="submit-btn">注册</div>
+        </div>
+    </div>
+</body>
+</html>

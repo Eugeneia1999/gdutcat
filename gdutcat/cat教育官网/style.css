@@ -1,0 +1,527 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+img{
+    border:0;
+}
+ol, ul ,li{list-style: none;}
+#contenter{
+    padding: 0.64rem;
+    margin-bottom: 1rem;
+    background-color: #f6f6f6;
+    overflow-x: hidden;
+}
+/*头部logo和登录按钮*/
+#header{
+    height: 1.1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#logo {
+    width: 3.44rem;
+    height: 1rem;
+}
+#logo img{
+    width: 3.44rem;
+    height: 1rem;
+}
+#people-data {
+    height: 1rem;
+}
+#people-data a{
+    text-decoration: none;
+    color: #11120d;
+    font-size: 0.384rem;
+    height: 1rem;
+    line-height: 1rem;
+    vertical-align: top;
+}
+#people-data i{
+    margin:0 0.5rem;
+    display: inline-block;
+    width: 1px;
+    height: 0.384rem;
+    background-color: #11120d;
+    position: relative;
+    top: -25%;
+}
+
+/*触屏轮播图*/
+#moveImg{
+    height: 8.54rem;
+    margin: 0.1rem auto;
+    position: relative;
+    overflow-x:hidden;
+}
+
+
+#ul-move{
+    width: 44.16rem;
+    position: relative;
+}
+#ul-move li{
+    float: left;
+    height: 8.54rem;
+    width: 14.72rem;
+    display:-webkit-box;
+    -webkit-box-align:center;
+    -webkit-box-pack:center;
+}
+#ul-move img{
+    height: 8.54rem;
+    width: 14.72rem;
+    border-radius: 5px;
+    margin-top: 0.2rem;
+}
+/*轮播图下面按钮*/
+#moveImg #icon{
+    position: absolute;
+    bottom: 0.8rem;
+    left: 50%;
+    margin-left: -0.8rem;
+    width: 1.6rem;
+    height:0.33rem ;
+}
+#moveImg #icon span{
+    width: 0.33rem;
+    height: 0.33rem;
+    background: #ccc;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+#wapNavBox{
+    height: 3.627rem;
+    margin-top: 1.07rem;
+    display: flex;
+    justify-content: space-around;
+}
+#wapNavBox a{
+    display: inline-block;
+    width: 2.75rem;
+    height: 3.413rem;
+    text-decoration: none;
+    color: #11120d;
+}
+#wapNavBox .navImg img{
+    width: 2.75rem;
+    height: 2.75rem;
+}
+#wapNavBox .navName{
+    font-size: 0.47rem;
+    text-align: center;
+}
+
+/*广告盒子*/
+.advertizing-box{
+    margin-top: 1.7rem;
+    height: 3.22rem;
+    box-shadow: -2px 0 0.28rem 0 rgba(255,66,85,0.6);
+    border-radius: 1.536rem;
+    background-image: url(image/red.jpg);
+    background-position: 100%;
+    background-size: 100%;
+}
+.advertizing-box img{
+    width: 5.04rem;
+    height: 4.117rem;
+    position: relative;
+    bottom: 0.82rem;
+    left: 1rem;
+}
+#advertizing-text{
+    position: relative;
+    top: -1.6rem;
+    left: 1rem;
+    display: inline-block;
+}
+#advertizing-text p{
+    font-family: MicrosoftYaHei;
+    font-size: 0.832rem;
+    font-weight: normal;
+    font-stretch: normal;
+    color: #fefefe;
+}
+#advertizing-text span{
+    font-family: MicrosoftYaHei-Bold;
+    font-size: 0.832rem;
+    color: #fefefe;
+    display: block;
+    font-weight: bold;
+}
+.advertizing-box a{
+    display: inline-block;
+    box-sizing: border-box;
+    width: 2.47rem;
+    height: 2.47rem;
+    background-color: #ff6500;
+    border-radius: 50%;
+    border: 0.3rem solid #e8ff00;
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    right: -1rem;
+    top: -74%;
+    text-align: center;
+    line-height: 1.5rem;
+    font-weight: bolder;
+}
+
+/*标题盒子*/
+.contenter-title{
+    width: 5.18rem;
+    height: 1.704rem;
+    margin: 1.11rem auto 0.5rem;
+}
+.contenter-title img{
+    width: 0.6rem;
+    height: 0.76rem;
+    display: inline-block;
+}
+
+.contenter-title p{
+    height: 0.704px;
+    font-family: MicrosoftYaHei;
+    font-size: 0.73rem;
+    line-height: 1.2rem;
+    color: #11120d;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.recom-listbox{
+    overflow: auto;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+#class-listbox{
+    height: 10.35rem;
+}
+#class-listbox li{
+    display: inline-block;
+}
+#class-listbox a{
+    display: inline-block;
+    height: 2.7rem;
+    width: 6.8rem;
+    background-size: 100%;
+    text-decoration: none;
+    padding: 1rem;
+    border-radius: 5px;
+}
+.listbox-text p{
+    font-size: 0.64rem;
+    color: #fff;
+    white-space: normal;
+    letter-spacing: 0.13rem;
+}
+.listbox-text span{
+    font-size: 0.5rem;
+    color: rgba(0,0,0,1);
+    display: inline-block;
+    margin-top: 0.2rem;
+    width: 3rem;
+    text-align: center;
+    height: 0.9rem;
+    background-color: #f6f6f6;
+    border-radius: 2px;
+}
+/*广告盒子*/
+#listbox-img1{
+    background-image: url(image/list1.png);
+}
+#listbox-img2{
+    background-image: url(image/list2.png);
+}
+#listbox-img3{
+    background-image: url(image/list3.png);
+}
+#listbox-img4{
+    background-image: url(image/list4.png);
+}
+#listbox-img5{
+    background-image: url(image/list5.png);
+}
+#listbox-img6{
+    background-image: url(image/list6.png);
+}
+#listbox-img1 span{
+    color:#97a48d;
+}
+#listbox-img2 span{
+    color:#ecd1d8;
+}
+#listbox-img3 span{
+    color:#a0a7b7;
+}
+#listbox-img4 span{
+    color:#fdecda;
+}
+#listbox-img5 span{
+    color:#f5eff1;
+}
+#listbox-img6 span{
+    color:#686264;
+}
+.classbox-advertizing a{
+    display: inline-block;
+    height: 3.84rem;
+    width: 100%;
+    box-sizing: border-box;
+    background-size: 100%;
+    background-position: 50%;
+    text-decoration: none;
+    padding: 0.8rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+#classbox-advertizing1{
+    background-image: url(image/书籍.jpg);
+}
+.classbox-advertizing  p{
+    font-size: 0.6rem;
+    color: #fff;
+    white-space: normal;
+    letter-spacing: 0.03rem;
+}
+.classbox-advertizing span{
+    font-size: 0.3rem;
+    color: #84493f;
+    display: inline-block;
+    margin-top: 0.2rem;
+    text-align: center;
+    background-color: #f6f6f6;
+    border-radius: 2px;
+    padding: 0.1rem 0.2rem;
+}
+.orange-btn{
+    display: inline-block;
+    height: 0.754rem;
+    width: 3.2rem;
+    border-radius: 2rem;
+    background-color: #ff9a16;
+    padding: 0.2rem;
+    font-size: 0.412rem;
+    color: #fff;
+    text-align: center;
+}
+.classbox-retive{
+    position: relative;
+    bottom: 0.8rem;
+    right: -10rem;
+}
+.lecture-listbox>div{
+    width: auto;
+    height: 4.23rem;
+    margin-bottom: 0.5rem;
+}
+.lecture-listbox a{
+    display: inline-block;
+    height: 4.23rem;
+    width: 100%;
+    box-sizing: border-box;
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+    margin-bottom: 1rem;
+    box-shadow: -1px 0px 10px 0px rgba(202, 202, 202, 0.6);
+}
+.lecture-listbox img{
+    width: 4.352rem;
+    height: 4.2rem;
+    display: inline-block;
+    position: relative;
+    left: 0;
+    bottom: 0;
+}
+
+.lecture-listbox .lecture-listbox-text p{
+    font-family: MicrosoftYaHei;
+    font-size: 0.6rem;
+    color: #11120d;
+    margin-bottom: -0.4rem;
+}
+.lecture-listbox .lecture-listbox-text {
+    position: relative;
+    left: 5rem;
+    top: -4rem;
+}
+.lecture-listbox .lecture-listbox-text span{
+    font-family: MicrosoftYaHei;
+    font-size: 0.4rem;
+    color: #8d8d8d;
+    display: inline-block;
+}
+.lecture-listbox-count {
+    background-color:#fff2e2;
+    padding: 0.1rem 0.2rem;
+    font-size: 0.4rem;
+    position: relative;
+    bottom: 3.3rem;
+    left: 4.8rem;
+    border-radius: 4px;
+    vertical-align: middle;
+    display: inline-block;
+    color: black;
+    line-height: 0.7rem;
+    height: 0.7rem;
+}
+.lecture-listbox-count span{
+    display: inline-block;
+    width: 0.6rem;
+    height: 0.6rem;
+   font-size: 0.4rem;
+   background-color:#ff9a16;
+    color:#fff;
+    line-height: 0.6rem;
+    border-radius: 0.1rem;
+    text-align: center;
+}
+.lecture-listbox-retive{
+    position: relative;
+    bottom: 3.4rem;
+    right: -5.1rem;
+    height: 0.5rem;
+    width: 2.5rem;
+    border-radius: 1rem;
+    padding: 0.1rem;
+    font-size: 0.412rem;
+    line-height: 0.5rem;
+}
+#classbox-advertizing2{
+    background-image: url(image/课桌.jpg);
+}
+#teacher-list{
+    margin-bottom: 1rem;
+}
+.teacher-listbox{
+    width: 5.12rem;
+    height: 6.68rem;
+    background-color: #ffffff;
+    display: inline-block;
+    overflow-x: hidden;
+    text-align: center;
+    position: relative;
+    margin-top: 2rem;
+    overflow-x: visible;
+
+}
+.teacher-listbox img{
+    width: 2.56rem;
+    height: 2.56rem;
+    border: solid 0.1rem #ffffff;
+    position: absolute;
+    top: -1.5rem;
+    left: 1.2rem;
+    display: inline-block;
+    border-radius: 50%;
+}
+.teacher-listbox h1{
+    font-family: MicrosoftYaHei;
+    font-size: 0.6rem;
+    line-height: 1.1rem;
+    color: #ff9a16;
+    margin-top: 1.2rem;
+}
+.teacher-listbox p{
+    font-size: 0.384rem;
+    line-height: 0.786rem;
+    color: #11120d;
+}
+.teacherbox-retive{
+    position: relative;
+    bottom: 0rem;
+    right: 0rem;
+}
+#classbox-advertizing3{
+    background-image: url(image/飞鸟.jpg);
+}
+.campus-listbox>div{
+    width: auto;
+    height: 4.23rem;
+    margin-bottom: 0.5rem;
+}
+.campus-listbox a{
+    display: inline-block;
+    height: 4.23rem;
+    width: 100%;
+    box-sizing: border-box;
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+    margin-bottom: 1rem;
+    box-shadow: -1px 0px 10px 0px rgba(202, 202, 202, 0.6);
+}
+.campus-listbox img{
+    width: 3.78rem;
+    height: 3.78rem;
+    display: inline-block;
+    position: relative;
+    left: 0;
+    bottom: -0.2rem;
+    border-radius: 0.2rem;
+}
+
+.campus-listbox .campus-listbox-text p{
+    font-family: MicrosoftYaHei;
+    font-size: 0.4rem;
+    color: #8d8d8d;
+    margin-bottom: -0.4rem;
+}
+.campus-listbox .campus-listbox-text h1{
+    font-size: 0.6rem;
+    color: #11120d;
+    margin-bottom: 1rem;
+}
+.campus-listbox .campus-listbox-text {
+    position: relative;
+    left: 4.5rem;
+    top: -3.5rem;
+}
+.campus-listbox .campus-listbox-text span{
+    font-family: MicrosoftYaHei;
+    font-size: 0.3rem;
+    color: #ff9d1e;
+    display: inline-block;
+}
+.advertizing-box h1{
+    font-size: 0.6rem;
+    color:#fff;
+    text-align: center;
+}
+#baoming{
+    border-radius: 1rem;
+    background-color:rgba(0,0,0,0);
+}
+#baoming input{
+    font-size:0.3rem;
+    border: none;
+    padding: 0 0 0 1rem;
+    vertical-align: middle;
+    height: 1.3rem;
+    outline:none;
+    background-color: rgba(0,0,0,0);
+    color: #fff;
+}
+#baoming span{
+    background-color:#fff;
+    color: #ff6d37;
+}
+#footer{
+    height: 4rem;
+    background-color: #3d3d3d;
+    padding-top: 1rem;
+}
+#foot-text{
+    width: 14rem;
+    text-align: center;
+    margin: 0 auto;
+}
+#foot-text p{
+    font-size: 0.4rem;
+    text-align: center;
+    color: #fff;
+}

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>猫咪教育官网-选择cat选择未来</title>
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+      //通过window.screen.width获取屏幕的宽度
+     var offWidth = window.screen.width / 16; //这里用宽度/16表示1rem取得的px
+     //基于的是320宽度的设计稿
+     document.getElementsByTagName("html")[0].style.fontSize = offWidth + 'px'; //把rem的值复制给顶级标签html的font-size
+</script>
+</head>
+<body>
+    <div id="contenter">
+        <div id="header">
+            <div id="logo">
+                <img src="image/logo.png" alt="gdutcat">
+            </div>
+            <div id="people-data">
+                <a href="登录.html">登录</a>
+                <i></i>
+                <a href="注册.html">注册</a>
+            </div>
+        </div>
+        <div id="mian">
+            <div id="moveImg">
+                <ul id='ul-move'>
+                    <li><img src="image/1.jpeg"></li>
+                    <li><img src="image/2.jpeg"></li>
+                    <li><img src="image/3.jpeg"></li>
+                </ul>
+                <div id="icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div id="wapNavBox">
+                <a href="javascript:void(0)">
+                    <div class="navImg">
+                        <img src="image/nav1.png" alt="">
+                    </div>
+                    <div class="navName">
+                        <p>报考须知</p>
+                    </div>
+                </a>
+                <a href="javascript:void(0)">
+                    <div class="navImg">
+                        <img src="image/nav2.png" alt="">
+                    </div>
+                    <div class="navName">
+                        <p>猫咪名师</p>
+                    </div>
+                </a>
+                <a href="javascript:void(0)">
+                    <div class="navImg">
+                        <img src="image/nav3.png" alt="">
+                    </div>
+                    <div class="navName">
+                        <p>猫咪分校</p>
+                    </div>
+                </a>
+                <a href="javascript:void(0)">
+                    <div class="navImg">
+                        <img src="image/nav4.png" alt="">
+                    </div>
+                    <div class="navName">
+                        <p>自考问答</p>
+                    </div>
+                </a>
+            </div>
+            <div class="advertizing-box">
+                <img src="image/学士服.png" alt="">
+                <div id="advertizing-text">
+                    <p >本科学习计划</p>
+                    <span>马上0元抢</span>
+                </div>
+                <a href="" class="advertizing-btn">抢</a>
+            </div>
+            <div class="contenter-title">
+                <img src="image/blue-icon.png" alt="" />
+                <p>自考头条</p>
+                <img src="image/blue-icon.png" alt="" />
+            </div>
+            <div class="recom-listbox" id="class-listbox">
+                <ul>
+                    <li>
+                        <a href="" id="listbox-img1">
+                            <div class="listbox-text">
+                                <p>给零基础自考人的第一课</p>
+                                <span>关于自考</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" id="listbox-img2">
+                            <div class="listbox-text">
+                                <p>给零基础自考人的第一课</p>
+                                <span>关于自考</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" id="listbox-img3">
+                            <div class="listbox-text">
+                                <p>给零基础自考人的第一课</p>
+                                <span>关于自考</span>
+                            </div>
+                        </a>
+                    </li>
+                    <br>
+                    <li>
+                        <a href="" id="listbox-img4">
+                            <div class="listbox-text">
+                                <p>给零基础自考人的第一课</p>
+                                <span>关于自考</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" id="listbox-img5">
+                            <div class="listbox-text">
+                                <p>给零基础自考人的第一课</p>
+                                <span>关于自考</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" id="listbox-img6">
+                            <div class="listbox-text">
+                                <p>给零基础自考人的第一课</p>
+                                <span>关于自考</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="classbox-advertizing">
+                <a href="#" id="classbox-advertizing1">
+                    <div class="classbox-advertizing-text">
+                        <p>猫咪教育助学金计划，助更多人圆梦</p>
+                        <span>每人最多申请2000元</span>
+                    </div>
+                    <div class="orange-btn classbox-retive" >立即申请</div>
+                </a>
+            </div>
+            <div class="contenter-title">
+                <img src="image/blue-icon.png" alt="" />
+                <p>免费讲座</p>
+                <img src="image/blue-icon.png" alt="" />
+            </div>
+            <div class="lecture-listbox">
+                <div>
+                    <a href="#">
+                        <img src="image/老师1.jpg" alt="">
+                            <div class="lecture-listbox-text">
+                                <p>求职期间的法律问题</p>
+                                <span>求职不再踩坑</span>
+                            </div>
+                            <div class="lecture-listbox-count">
+                                 距离开课还有<span>26</span>:<span>34</span>:<span>36</span>
+                            </div>
+                        <div class="orange-btn lecture-listbox-retive" >马上报名</div>
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <img src="image/老师2.jpg" alt="">
+                            <div class="lecture-listbox-text">
+                                <p>专业导师带你360度看自考</p>
+                                <span>自考原来这么简单</span>
+                            </div>
+                            <div class="lecture-listbox-count">
+                                 距离开课还有<span>26</span>:<span>34</span>:<span>36</span>
+                            </div>
+                        <div class="orange-btn lecture-listbox-retive" >马上报名</div>
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <img src="image/老师3.jpg" alt="">
+                            <div class="lecture-listbox-text">
+                                <p>考证学习规划全攻略：为自我开挂</p>
+                                <span>提升自我</span>
+                            </div>
+                            <div class="lecture-listbox-count">
+                                 距离开课还有<span>26</span>:<span>34</span>:<span>36</span>
+                            </div>
+                        <div class="orange-btn lecture-listbox-retive" >马上报名</div>
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <img src="image/老师4.jpg" alt="">
+                            <div class="lecture-listbox-text">
+                                <p>孕期的四大职场法律问题</p>
+                                <span>保护自身权益</span>
+                            </div>
+                            <div class="lecture-listbox-count">
+                                 距离开课还有<span>26</span>:<span>34</span>:<span>36</span>
+                            </div>
+                        <div class="orange-btn lecture-listbox-retive" >马上报名</div>
+                    </a>
+                </div>
+            </div>
+            <div class="classbox-advertizing">
+                <a href="#" id="classbox-advertizing2">
+                    <div class="classbox-advertizing-text">
+                        <p>猫咪教育名师课堂专讲-自考攻略</p>
+                        <span>第125期</span>
+                    </div>
+                    <div class="orange-btn classbox-retive" >立即申请</div>
+                </a>
+            </div>
+            <div class="contenter-title">
+                <img src="image/blue-icon.png" alt="" />
+                <p>猫咪名师</p>
+                <img src="image/blue-icon.png" alt="" />
+            </div>
+            <div id="teacher-list" class="recom-listbox">
+                <div class="teacher-listbox">
+                    <img src="image/老师1.jpg" alt="" />
+                    <h1>王海星老师</h1>
+                    <p>泰罗学院院长</p>
+                    <p>企业人力资源管理师</p>
+                    <p>心理咨询师</p>
+                    <div class="orange-btn teacherbox-retive" >关注</div>
+                </div>
+                <div class="teacher-listbox">
+                    <img src="image/老师2.jpg" alt="" />
+                    <h1>韩坤滟老师</h1>
+                    <p>香港中文大学硕士</p>
+                    <p>泰罗学院高级讲师</p>
+                    <p>精通英语及教育学</p>
+                    <div class="orange-btn teacherbox-retive" >关注</div>
+                </div>
+                <div class="teacher-listbox">
+                    <img src="image/老师4.jpg" alt="" />
+                    <h1>黎展华老师</h1>
+                    <p>泰罗学院高级讲师</p>
+                    <p>加拿大海归硕士</p>
+                    <p>逻辑达人</p>
+                    <div class="orange-btn teacherbox-retive" >关注</div>
+                </div>
+                <div class="teacher-listbox">
+                    <img src="image/老师3.jpg" alt="" />
+                    <h1>张超老师</h1>
+                    <p>泰罗学院高级讲师</p>
+                    <p>北京师范大学硕士</p>
+                    <p>精通汉语言</p>
+                    <div class="orange-btn teacherbox-retive" >关注</div>
+                </div>
+            </div>
+            <div class="classbox-advertizing">
+                <a href="#" id="classbox-advertizing3">
+                    <div class="classbox-advertizing-text">
+                        <p>猫咪筑梦计划，让知识改变命运</p>
+                        <span>零学费报名</span>
+                    </div>
+                    <div class="orange-btn classbox-retive" >立即申请</div>
+                </a>
+            </div>
+            <div class="contenter-title">
+                <img src="image/blue-icon.png" alt="" />
+                <p>附近校区</p>
+                <img src="image/blue-icon.png" alt="" />
+            </div>
+            <div class="campus-listbox">
+                <div>
+                    <a href="#">
+                        <img src="image/校区1.png" alt="">
+                            <div class="campus-listbox-text">
+                                <h1>海珠校区</h1>
+                                <p>广州市海珠区新港西路135号</p>
+                                <span>电话：400-609-9971</span>
+                            </div>
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <img src="image/校区2.png" alt="">
+                            <div class="campus-listbox-text">
+                                <h1>天河校区</h1>
+                                <p>广州市天河区五山路141号尚德大夏608室</p>
+                                <span>电话：400-609-9971</span>
+                            </div>
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <img src="image/校区3.png" alt="">
+                            <div class="campus-listbox-text">
+                                <h1>番禺校区</h1>
+                                <p>广州市番禺区市桥街侨兴大道935号伊顿公馆</p>
+                                <span>电话：400-609-9971</span>
+                            </div>
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <img src="image/校区4.png" alt="">
+                            <div class="campus-listbox-text">
+                                <h1>黄埔校区</h1>
+                                <p>广州市黄埔区大沙地西路81号3楼</p>
+                                <span>电话：400-609-9971</span>
+                            </div>
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <img src="image/校区5.png" alt="">
+                            <div class="campus-listbox-text">
+                                <h1>深圳校区</h1>
+                                <p>深圳市南山区高新南七道15号深港学研基地</p>
+                                <span>电话：400-609-9971</span>
+                            </div>
+                    </a>
+                </div>
+            </div>
+            <div class="advertizing-box">
+                 <h1>注册领取价值10000元的学习资料</h1>
+                <div id="baoming">
+                  <input type="text" name="" value="" placeholder="请输入手机号">
+                  <span>立刻领取</span>
+                </div>
+            </div>
+    </div>
+    </div>
+    <div id="footer">
+        <div id="foot-text">
+            <p>Coptright 2008-2018 猫咪教育 All right reserved</p>
+            <p>网站版权归广州猫咪教育信息咨询有限公司所有</p>
+            <p>粤ICP备11041159号</p>
+        </div>
+</body>
+<script type="text/javascript">
+//从后台获取轮播图信息
+       window.onload=function(){
+            $.ajax({
+            //几个参数需要注意一下
+                type: "POST",//方法类型
+                dataType: "json",//预期服务器返回的数据类型
+                url: "http://education.gdutcat.top:8080/gdutcat/Banner/getBanners.do" ,//url
+                success: function(data){
+                    var jsonDate= JSON.parse(data);
+
+                error : function() {
+                    alert("网络异常！");
+                }
+            });
+        }
+
+
+    var oldX = newX = lastX = 0;
+    var index = 0;
+    var ul=document.getElementById("ul-move");
+    var allLi = ul.children;
+    document.addEventListener('touchstart',function(e){
+        newX = 0;
+        if(index == allLi.length-1){
+            ul.appendChild(ul.children[0]);
+            index--;
+            allLi[index].style.transition = '0s';
+            allLi[index+1].style.transition = '0s'
+            allLi[index].style.transform = 'translateX('+(-index*innerWidth)+'px)';
+
+            console.log(index)
+            allLi[index+1].style.transform = 'translateX('+((-index-2)*innerWidth)+'px)';
+        }
+        if(index == 0){
+
+            ul.insertBefore(ul.children[ul.children.length-1],ul.children[0])
+            index++;
+
+            allLi[index-1].style.transform = 'translateX('+(-innerWidth)+'px)';
+            allLi[index].style.transform = 'translateX('+(-innerWidth)+'px)';
+        }
+
+        allLi[index-1] && (allLi[index-1].style.transition = '0s');
+        allLi[index].style.transition = '0s';
+        allLi[index+1] && (allLi[index+1].style.transition = '0s');
+        oldX = e.touches[0].clientX;
+
+    },false);
+    document.addEventListener('touchmove',function(e){
+        newX = e.touches[0].clientX - oldX;
+
+
+        allLi[index-1] && (allLi[index-1].style.transform = 'translateX('+((-index*innerWidth)+newX)+'px)');
+        allLi[index].style.transform = 'translateX('+((-index*innerWidth)+newX)+'px)';
+        allLi[index+1] && (allLi[index+1].style.transform = 'translateX('+((-index*innerWidth)+newX)+'px)');
+        //console.log(newX);
+
+    },false);
+    document.addEventListener('touchend',function(){
+        if(newX%innerWidth<0 && newX%innerWidth >=-60){
+
+            allLi[index].style.transition = '0.3s'
+            allLi[index+1] && (allLi[index+1].style.transition = '0.3s');
+
+
+            allLi[index].style.transform = 'translateX('+(((-index+1)*innerWidth)+(-innerWidth))+'px)';
+            allLi[index+1].style.transform = 'translateX('+(((-index+1)*innerWidth)+(-innerWidth))+'px)';
+        }
+        else if(newX%innerWidth < -60){
+
+            allLi[index].style.transition = '0.3s';
+            allLi[index+1] && (allLi[index+1].style.transition = '0.3s');
+            allLi[index].style.transform = 'translateX('+((-index*innerWidth)+(-innerWidth))+'px)';
+            allLi[index+1] && (allLi[index+1].style.transform = 'translateX('+((-index*innerWidth)+(-innerWidth))+'px)');
+            index++;
+        }
+        else if(newX%innerWidth > 0 && newX%innerWidth <= 60){
+            console.log(index)
+            allLi[index].style.transition = '0.3s';
+            allLi[index-1].style.transition = '0.3s';
+            allLi[index].style.transform = 'translateX('+(((-index+1)*innerWidth)+(-innerWidth))+'px)';
+            allLi[index-1].style.transform = 'translateX('+(((-index+1)*innerWidth)+(-innerWidth))+'px)';
+        }
+        else if(newX%innerWidth > 60){
+
+            allLi[index].style.transition = '0.3s';
+            allLi[index-1] && (allLi[index-1].style.transition = '0.3s');
+            //console.log(index)
+
+            allLi[index].style.transform = 'translateX('+(((-index+1)*innerWidth))+'px)';
+            allLi[index-1].style.transform = 'translateX('+(((-index+1)*innerWidth))+'px)'
+            index--
+        }
+    },false);
+</script>
+</html>

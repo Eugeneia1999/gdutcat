@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>猫咪教育官网-选择cat选择未来</title>
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+      //通过window.screen.width获取屏幕的宽度
+     var offWidth = window.screen.width / 16; //这里用宽度/16表示1rem取得的px
+     //基于的是320宽度的设计稿
+     document.getElementsByTagName("html")[0].style.fontSize = offWidth + 'px'; //把rem的值复制给顶级标签html的font-size
+</script>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    img{
+        border:0;
+    }
+    #wrap{
+        width:100%;
+        height: 100%;
+    }
+    #head{
+        width: 100%;
+        height:1.2rem;
+        line-height: 1.2rem;
+    }
+    #head-context{
+        width: 92%;
+        height: auto;
+        margin: 0 auto;
+    }
+    #back{
+        width:0.6rem;
+        height: auto;
+         position: absolute;
+        top: 0.4rem;
+        left: 0.4rem;
+    }
+    #back>img{
+        width: 1rem;
+        height: 1rem;
+    }
+    #registe{
+        position: absolute;
+        right: 0.5rem;
+        top: 0.4rem;
+        color: #fe7b24;
+        font-size: 0.7rem;
+        text-decoration:none;
+    }
+    #login{
+        width: 3rem;
+        height: 3rem;
+        margin: 2rem auto 0;
+    }
+    #login>img{
+        width: 3rem;
+        height: 3rem;
+    }
+    #input{
+        width: 90%;
+        margin:1rem auto;
+        height: auto;
+    }
+    #input>input{
+        width: 90%;
+        margin:0 auto;
+        display: block;
+        border-radius:0;
+        padding: 0.45rem 0;
+        border: none;
+        line-height: 0.6rem;
+        color: #222222;
+        border-bottom:1px solid #d6d6d6 ;
+        height: 1.2rem;
+    }
+    #submit-btn{
+        width:90%;
+        line-height: 1.8rem;
+        text-align: center;
+        color: white;
+        height: 1.8rem;
+        border-radius: 0.2rem;
+        margin: 1rem auto 0;
+        background-color: #fe7b24;
+        font-size: 0.8rem;
+    }
+    #hide-wrap{
+        width:100%;
+        height: 100%;
+        display: none;
+    }
+    #hide-wrap>img{
+        width: 3rem;
+        height: 3rem;
+        margin:2rem auto 0;
+        display: block;
+    }
+    #hide-wrap p{
+        text-align:center;
+        margin-top: 1.5rem;
+        color:#fe7b24;
+        font-size: 1.5rem;
+    }
+
+    #back-btn{
+        width:90%;
+        line-height: 1.8rem;
+        text-align: center;
+        color: white;
+        height: 1.8rem;
+        border-radius: 0.2rem;
+        margin: 1rem auto 0;
+        background-color: #fe7b24;
+        font-size: 0.8rem;
+    }
+    #back-btn a{
+        text-decoration: none;
+        width:100%;
+        color: white;
+        line-height: 1.8rem;
+    }
+</style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <a href="猫咪教育官网.html" id="back">
+                <img src="image/箭头.svg" alt="">
+            </a>
+            <a href="注册.html" id="registe">注册</a>
+        </div>
+        <div id="login">
+            <img src="image/登录.svg" alt="">
+        </div>
+
+        <form id="input">
+            <input type="text" name="userName" value="" placeholder="手机号码/用户名">
+            <input type="password" name="password" value="" placeholder="密码">
+            <div id="submit-btn" onclick="login();">登录</div>
+        </form>
+    </div>
+    <div id="hide-wrap">
+        <img src="image/认证完成.svg" alt="">
+        <p id="hide-p">登录成功</p>
+        <div id="back-btn"><a href="猫咪教育官网.html">返回首页</a></div>
+    </div>
+</body>
+    <script type="text/javascript">
+        function login(){
+            $.ajax({
+            //几个参数需要注意一下
+                type: "POST",//方法类型
+                dataType: "json",//预期服务器返回的数据类型
+                url: "http://education.gdutcat.top:8080/gdutcat/admin/login.do" ,//url
+                data: $('#input').serialize(),
+                success: function(data){
+                    var jsonDate=JSON.parse(data);
+                    if (jsonDate.code==0){
+                        document.getElementById('wrap').style.display="none";
+                        document.getElementById('hide-wrap').style.display="block";
+
+                    }
+                    else {  //修改失败
+                        document.getElementById('wrap').style.display="none";
+                        document.getElementById('hide-wrap').style.display="block";
+                        document.getElementById('hide-p').innerHTML="登录失败，请核对信息";
+                        document.getElementById('back-btn').innerHTML="返回登录界面";
+                        document.getElementById('back-btn').href="登录.html";
+                    }
+                 ew},
+                error : function() {
+                    alert("网络异常！");
+                }
+            });
+        }
+    </script>
+</html>

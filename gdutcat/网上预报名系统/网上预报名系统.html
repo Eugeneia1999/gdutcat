@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>广东省招考招生网上预报名系统</title>
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="网上预报名系统style.css">
+    <script>
+      //通过window.screen.width获取屏幕的宽度
+     var offWidth = window.screen.width / 16; //这里用宽度/16表示1rem取得的px
+     //基于的是320宽度的设计稿
+     document.getElementsByTagName("html")[0].style.fontSize = offWidth + 'px'; //把rem的值复制给顶级标签html的font-size
+</script>
+</head>
+<body>
+    <!--弹窗开始-->
+    <div id="Popup">
+      <div id="PopupBox">
+        <img src="成功.svg" alt="#">
+        <p id="PopupBox-text">报名成功</p>
+        <input type="button" name="" value="关闭" id="PopupBox-btn" onclick="close();">
+      </div>
+    <!--弹窗结束-->
+    </div>
+    <div id="contenter">
+        <div id="contenter-main">
+            <div id="header">
+              <h1>广东省招考招生网上预报名系统</h1>
+              <p>Guangdong self-study examination online registration system</p>
+              <p></p>
+            </div>
+            <div id="main">
+              <div id="schoolMajor">
+                <div id="school">
+                  <span>院校</span>
+                  <select id="academyName" class="schoolMajor-select">
+                    <option value="华南理工大学">华南理工大学</option>
+                    <option value="华南师范大学">华南师范大学</option>
+                    <option value="暨南大学">暨南大学</option>
+                    <option value="广东外语外贸大学">广东外语外贸大学</option>
+                    <option value="汕头大学">汕头大学</option>
+                    <option value="">广东财经大学</option>
+                  </select>
+                </div>
+                <div id="major">
+                  <span>专业</span>
+                  <select id="professionName" class="schoolMajor-select">
+                    <option value="计算机科学与技术">计算机科学与技术</option>
+                    <option value="土木工程">土木工程</option>
+                    <option value="工程管理">工程管理</option>
+                    <option value="数字媒体艺术">数字媒体艺术</option>
+                    <option value="汽车服务工程">汽车服务工程</option>
+                  </select>
+                </div>
+              </div>
+              <div id="baoming-btn">
+                <div id="baoming-level">
+                  <span>报考层次：</span>
+                  <div>
+                  <form >
+                    <label><input type="radio" value="1" name="level" />专科/独立本科</label>
+                    <label><input type="radio" value="2" name="level"/>专升本</label>
+                  </form>
+                  </div>
+                </div>
+                <div id="baoming-type">
+                  <span>类别：</span>
+                  <form >
+                    <label><input type="radio" name="type" value="1" />自学考试 </label>
+                    <label><input type="radio" name="type" value="2" />成人高考 </label>
+                    <br>
+                    <label><input type="radio" name="type" value="3" />远程教育</label>
+                  </form>
+                </div>
+              </div>
+              <div id="people-data">
+                <div id="name">
+                  <span>姓名：</span>
+                  <input type="text" id="name" name="name" value="" placeholder="请填写您的姓名">
+                </div>
+                <div id="phone-number">
+                  <span>电话：</span>
+                  <input type="text" id="phoneNumber" name="phoneNumber" value="" placeholder="请填写您的联系电话">
+                </div>
+              </div>
+              <div id="butto-data">
+                  <input type="button" name="" value="下一步" class="button-focus" id="submit-btn" onclick="ajax_submit();">&nbsp;
+                  <input type="button" name="" value="重新填写" class="button-focus">
+              </div>
+              <p id="tip"></p>
+            </div>
+            <div id="baoming-attention">
+              <p>预报名注意事项</p>
+            </div>
+            <div id="footer">
+              <p>Copyright 2008-2018 All right reserved</p>
+              <p>主办单位：广东省招考招生网</p>
+              <p>版权所有： 广东省招考招生预报名中心</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script >
+function ajax_submit() {
+            var name = $("#name").val();//获取表单的输入值;
+            var phoneNumber = $("#phoneNumber").val();//获取表单的输入值;
+            var academyName = $("#academyName").val();
+            var professionName = $("#professionName").val();
+            var level =  $("input[name='level']").val();
+            var type =  $("input[name='type']").val();
+
+            $.ajax({
+                type: 'post',  //数据提交方式（post/get）
+                url: 'http://education.gdutcat.top:8080/gdutcat/Consult/addPCConsult.do',  //提交到的url
+                data: JSON.stringify({
+                'name':name,
+                'phoneNumber':phoneNumber,
+                'academyName':academyName,
+                'professionName':professionName,
+                'level':level,
+                'type':type,
+                }),//提交的数据
+                dataType: 'json',//返回的数据类型格式
+                contentType:'application/json',
+                success: function(data){
+                    var jsonDate= JSON.parse(data);
+                    if (jsonDate.code==0){
+                        document.getElementById('Popup').style.display="block";
+
+                    }
+                    else if(jsonDate.code==2){
+                        $("tip").innerHTML="手机号格式错误！请重新填写";
+                    }
+                    else {  //修改失败
+                        alert(jsonDate.msg);
+                    }
+                }
+            });
+        }
+function close(){
+    document.getElementById('Popup').style.display='none';
+    }
+</script>
+</html>
